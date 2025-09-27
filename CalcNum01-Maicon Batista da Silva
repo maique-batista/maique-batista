@@ -1,0 +1,357 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/maique-batista/maique-batista/blob/circleci-project-setup/CalcNum01-Maicon%20Batista%20da%20Silva\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "b_xodiXr_txF",
+        "outputId": "65cc348a-5b23-4efe-c4ed-2c21d4f185b3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3141592.6535849427\n",
+            "-4.850327968597412e-06\n"
+          ]
+        }
+      ],
+      "source": [
+        "import math\n",
+        "\n",
+        "soma=0\n",
+        "\n",
+        "for i in range (1000000):\n",
+        "    soma += (math.pi)\n",
+        "\n",
+        "print(soma)\n",
+        "print(soma - 1000000*math.pi)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A = 1\n",
+        "s = 1 + A\n",
+        "\n",
+        "while s > 1:\n",
+        "  A = A / 2\n",
+        "  s = 1 + A\n",
+        "\n",
+        "Precisao = A*2\n",
+        "\n",
+        "print(Precisao)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ozj8p9ro_0-0",
+        "outputId": "d6df47a0-0348-4609-c657-2bfbf3e71503"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.220446049250313e-16\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "\n",
+        "def f(x):\n",
+        "  y = x - math.sqrt(8)\n",
+        "  return y\n",
+        "\n",
+        "a = 0\n",
+        "b = 8\n",
+        "eps = 1e-6\n",
+        "\n",
+        "while (b-a) > eps:\n",
+        "  ya = f(a)\n",
+        "  yb = f(b)\n",
+        "  c = (a+b)/2\n",
+        "  yc = f(c)\n",
+        "  if (ya*yc) > 0:\n",
+        "    a = c\n",
+        "  else:\n",
+        "    b = c\n",
+        "\n",
+        "print(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "otGuYW3OAe73",
+        "outputId": "facc10a1-d332-4f63-941d-9928f67580be"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.828427314758301\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "\n",
+        "def f(x):\n",
+        "  y = x - math.sqrt(91)\n",
+        "  return y\n",
+        "\n",
+        "a = 0\n",
+        "b = 91\n",
+        "eps = 1e-6\n",
+        "\n",
+        "while (b-a) > eps:\n",
+        "  ya = f(a)\n",
+        "  yb = f(b)\n",
+        "  c = (a+b)/2\n",
+        "  yc = f(c)\n",
+        "  if (ya*yc) > 0:\n",
+        "    a = c\n",
+        "  else:\n",
+        "    b = c\n",
+        "\n",
+        "print(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nb2g6hvRBS1m",
+        "outputId": "a6d024ae-c2be-48f5-a451-f728695f3185"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "9.539392076432705\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "\n",
+        "def f(x):\n",
+        "  y = x - (7**(1/3))\n",
+        "  return y\n",
+        "\n",
+        "a = 0\n",
+        "b = 7\n",
+        "eps = 1e-6\n",
+        "\n",
+        "while (b-a) > eps:\n",
+        "  ya = f(a)\n",
+        "  yb = f(b)\n",
+        "  c = (a+b)/2\n",
+        "  yc = f(c)\n",
+        "  if (ya*yc) > 0:\n",
+        "    a = c\n",
+        "  else:\n",
+        "    b = c\n",
+        "\n",
+        "print(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TI3DTNBCBY3X",
+        "outputId": "92866c72-52b7-4a4e-d0e0-27ee03a35990"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.9129317998886108\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "\n",
+        "def f(x):\n",
+        "  y = x - (200**(1/3))\n",
+        "  return y\n",
+        "\n",
+        "a = 0\n",
+        "b = 200\n",
+        "eps = 1e-6\n",
+        "\n",
+        "while (b-a) > eps:\n",
+        "  ya = f(a)\n",
+        "  yb = f(b)\n",
+        "  c = (a+b)/2\n",
+        "  yc = f(c)\n",
+        "  if (ya*yc) > 0:\n",
+        "    a = c\n",
+        "  else:\n",
+        "    b = c\n",
+        "\n",
+        "print(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bHZ6shjxBoe3",
+        "outputId": "2dc50fbb-e0f6-4170-a0c0-fe01f9413b2f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5.848035961389542\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "\n",
+        "def der(x):\n",
+        "  y = (x**(-x))*(math.log(x)+1)\n",
+        "  return y\n",
+        "\n",
+        "def f(x):\n",
+        "  y = 0.5 - (x**(-x))\n",
+        "  return y\n",
+        "\n",
+        "x0 = 1.5\n",
+        "eps = 1e-4\n",
+        "delta = 1e10\n",
+        "\n",
+        "while delta > eps:\n",
+        "  fx = f(x0)\n",
+        "  dx = der(x0)\n",
+        "  x1 = x0 - fx/dx\n",
+        "  delta = abs(x1-x0)\n",
+        "  x0 = x1\n",
+        "  print(x0)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dtVmsiqBBsOO",
+        "outputId": "7ddcd456-d629-414d-cef4-467036baa6bf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.5579461887644674\n",
+            "1.5596090862990009\n",
+            "1.5596104694614124\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "\n",
+        "def C(t):\n",
+        "  y = 80 * (math.e**(-2*t)) + 20 * (math.e**(-0.1*t))\n",
+        "  return y\n",
+        "\n",
+        "C_inicial = C(0)\n",
+        "C_desejada = 0.10 * C_inicial\n",
+        "\n",
+        "a = 0\n",
+        "b = 10\n",
+        "eps = 1e-6\n",
+        "\n",
+        "while (b-a) > eps:\n",
+        "  ya = C(a)\n",
+        "  yb = C(b)\n",
+        "  c = (a+b)/2\n",
+        "  yc = C(c)\n",
+        "  if yc > C_desejada:\n",
+        "    b = c\n",
+        "  else:\n",
+        "    a = c\n",
+        "\n",
+        "print(c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "oAj36xv1E2Em",
+        "outputId": "ffb54156-a90e-454e-db61-c18853a8a495"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5.960464477539062e-07\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
